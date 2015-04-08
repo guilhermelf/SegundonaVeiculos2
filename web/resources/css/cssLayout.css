@@ -1,0 +1,245 @@
+address {
+    bottom:0;
+    background-color: #00457D;
+    margin-top:100px;
+    color:#FFF;
+    text-align:center;
+    height:60px;
+    line-height:50px;
+    position:fixed;
+    padding: 5px;
+    width: 100%;
+}
+
+#content {
+    margin: 0;
+    text-align: center;
+
+    padding:1px;
+    padding-bottom:60px;   /* Height of the footer element */
+}
+
+
+#bottom {
+    width:100%;
+    height:60px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    padding: 5px;
+}
+
+.left_content {
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+    color: white;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+    color: black;
+    font-weight : bold;
+    text-decoration : underline;
+}
+
+h2 { 
+    font-weight: bold; 
+    font-size: 11pt;
+    line-height: 14pt; 
+    font-family: helvetica; 
+    font-variant: normal;
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+    color: black;
+}
+
+li :HOVER{
+    color: blue;
+}
+
+h1 { 
+    text-align: left;
+    font-weight: bold; 
+    font-size: 14pt;
+    line-height: 46px;
+    height:46px;
+    padding-left:5px;
+    color:#FFF; 
+    font-family: helvetica; 
+    font-variant: normal;
+    font-style: normal;
+    background:url(/SegundonaVeiculos2/imagens/bg_titulo.png) no-repeat;
+    margin-bottom: 20px;
+}
+
+.frms {
+    text-align: left;
+    width: 50% !important;
+    width:auto;
+    padding:10px;
+    background:#fff;
+    -moz-box-shadow: 0 0 3px 3px #888;
+    -webkit-box-shadow: 0 0 3px 3px #888;
+    box-shadow: 0 0 3px 3px #888;	
+}
+
+.login {
+    margin: 0 auto;
+    width: 450px;;
+    padding:10px;
+    background:#fff;
+    -moz-box-shadow: 0 0 1px 1px #888;
+    -webkit-box-shadow: 0 0 1px 1px #888;
+    box-shadow: 0 0 1px 1px #888;
+
+    position: relative;
+    margin-top: 25%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    border: 0px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 188px;
+    padding: 8px 8px;
+
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9d9e9e;
+    text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+
+input[type="submit"] {
+    margin: 0 auto;
+    clear:both;
+    display:block;
+    background:url(/SegundonaVeiculos2/imagens/bg_botao.png) no-repeat;
+    width:236px !important;
+    height:69px !important;
+    line-height:69px !important;
+    padding:0 !important;
+    padding-top:20px !important;
+    margin-bottom:-18px !important;
+    text-align:center;
+    color:#FFF !important;
+    font:16px arial !important;
+    text-decoration:none !important;
+    font-weight:bold !important;
+
+    padding: 12px !important;
+
+    cursor: pointer;
+
+    border: 0px;
+}
+
+.btns {
+
+    clear:both;
+    display:block;
+    background:url(/SegundonaVeiculos2/imagens/bg_botao.png) no-repeat;
+    width:236px !important;
+    height:69px !important;
+    line-height:69px !important;
+    padding:0 !important;
+    padding-top:20px !important;
+    margin-bottom:-18px !important;
+    text-align:center;
+    color:#FFF !important;
+    font:16px arial !important;
+    text-decoration:none !important;
+    font-weight:bold !important;
+
+    cursor: pointer;
+
+    border: 0px;
+}
+
+input[type="submit"]:hover, .btns:hover {
+    color:#000;
+}
+
+.frms label {
+    float:left;
+    width:150px;
+    font-size: 11pt;
+    font-family: helvetica; 
+    font-variant: normal;
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #666666;
+    font: normal 11px verdana, arial, helvetica, sans-serif;
+    color: #363636;
+    background: #f6f6f6;
+    text-align:left;
+}
+
+thead, tfoot {
+    background:url(/segundonaVeiculos/imagens/bg1.png) repeat-x;
+    text-align:left;
+    height:30px;
+}
+thead th, tfoot th {
+    padding:5px;
+}
+
+table a {
+    color: #333333;
+    text-decoration:none;
+}
+
+table a:hover {
+    text-decoration:underline;
+}
+
+tr:odd {
+    background: #f1f1f1;
+}
+
+tbody th, tbody td {
+    padding:5px;
+}

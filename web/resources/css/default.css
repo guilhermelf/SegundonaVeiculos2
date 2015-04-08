@@ -1,0 +1,58 @@
+body {
+    color:#FFF; 
+    font-family: helvetica; 
+    background: url(/SegundonaVeiculos2/imagens/bg_segundona.png) no-repeat center top;
+    background-color: #f4f4f4;
+    color: #0E0E0E;
+    margin: 0;
+    padding:0;
+    text-align: center;
+    height:100%;
+}
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 0px solid #AFAFAF; 
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #D20005;
+}
+
+a:link, a:visited {
+    color: #045491;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+    color: #045491;
+    font-weight : bold;
+    text-decoration : underline;
+}
+
+h1 { 
+    font-weight: bold; 
+    font-size: 14pt;
+    line-height: 46px;
+    height:46px;
+    padding-left:5px;
+    color:#FFF; 
+    font-family: helvetica; 
+    font-variant: normal;
+    font-style: normal;
+    background:url(/SegundonaVeiculos2/imagens/bg_titulo.png) no-repeat;
+}
+
+#dv-conteudo {
+    width:768px;
+    height:400px;
+    margin-top:180px;
+    margin-left: 300px;
+}

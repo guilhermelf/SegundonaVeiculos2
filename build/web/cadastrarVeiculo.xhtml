@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./SegundonaTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="content">
+        <div id="dv-conteudo">
+        <h1>Cadastrar veículo</h1>
+	<div id="formulario">
+            <h:form class="frms">
+                <label for="txtNome">Nome:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtMarca">Marca:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtAno">Ano:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtPortas">Portas:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtCor">Cor:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtMotor">Motor:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtValvulas">Válvulas:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <label for="txtPreco">Preço:</label>
+                <h:inputText></h:inputText>
+                <br />
+                <br />
+                <h:commandButton value="Enviar"></h:commandButton>  
+                <br />               
+            </h:form>
+	</div>
+	<div id="resposta">
+		<p id="mensagem"></p>
+	</div>
+	<br />
+	<a class="btns" href="./veiculos.xhtml">Voltar ao menu veículos</a>
+	</div>
+    </ui:define>
+
+</ui:composition>
