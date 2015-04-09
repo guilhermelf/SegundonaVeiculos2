@@ -9,6 +9,7 @@
         <h:outputStylesheet name="./css/bootstrap/css/bootstrap.css"/>
         <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputScript name="./js/jquery-1.11.2.min.js"/>
         <title>Segundona Veículos 2.0</title>
     </h:head>
 
@@ -17,12 +18,14 @@
             <div id="content" class="center_content">
                 <ui:insert name="content">Content</ui:insert>
             </div>
-
-            <ui:insert name="bottom">
-              
-            </ui:insert>
+            <ui:insert name="bottom"></ui:insert>
 
         </div>
+        <script language="javascript">
+            $(function(){
+                $('#img_fabricio').show().addClass('slideUp');
+            });
+        </script>
 
     </h:body>
 

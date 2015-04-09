@@ -187,7 +187,7 @@ table {
 }
 
 thead, tfoot {
-    background:url(/segundonaVeiculos/imagens/bg1.png) repeat-x;
+    background:url(/SegundonaVeiculos2/imagens/bg1.png) repeat-x;
     text-align:left;
     height:30px;
 }
@@ -210,4 +210,69 @@ tr:odd {
 
 tbody th, tbody td {
     padding:5px;
+}
+
+#img_fabricio {
+    background:url(/SegundonaVeiculos2/imagens/fab_1.png) no-repeat;
+    width:329px;
+    height:367px;
+    position:absolute;
+    right:20%;
+    margin-top:-60px;
+    display:none;    
+}
+
+.slideUp {
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;			
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}	
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(100%);
+	}
+	50%{
+		-webkit-transform: translateY(-8%);
+	}
+	65%{
+		-webkit-transform: translateY(4%);
+	}
+	80%{
+		-webkit-transform: translateY(-4%);
+	}
+	95%{
+		-webkit-transform: translateY(2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
 }
