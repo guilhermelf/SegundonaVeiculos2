@@ -37,6 +37,7 @@ h1 {
 }
 
 #dv-conteudo {
+    text-align:left;
     width:768px;
     height:400px;
     margin:0 auto;
@@ -54,5 +55,5 @@ h1 {
     #content {
         background-size:100% !important;
     }
-    
+
 }

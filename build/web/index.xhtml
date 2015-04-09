@@ -4,17 +4,22 @@
                 template="./SegundonaTemplate.xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-    <ui:define name="content">       
-        <h:form class="login">
-
-            <label>Usuário</label><br />
-            <h:inputText></h:inputText><br />
-            <label>Senha</label><br />
-            <h:inputSecret></h:inputSecret><br />
-            <br />
-            <h:commandButton value="Logar" action="principal"></h:commandButton>
-            <br />
-            <br />
-        </h:form>
+    <ui:define name="content">
+        <div id="dv-conteudo">
+            <h:form class="login">
+                <h2>Acesso ao sistema</h2>
+                <p>
+                    <label>Usuário</label>
+                    <h:inputText></h:inputText>
+                </p>
+                <p>
+                    <label>Senha</label>
+                    <h:inputSecret></h:inputSecret>
+                </p>
+                <p>
+                    <h:commandButton value="Logar" action="principal"></h:commandButton>
+                </p>
+            </h:form>
+        </div>
     </ui:define>
 </ui:composition>

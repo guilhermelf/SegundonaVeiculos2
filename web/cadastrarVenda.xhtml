@@ -28,30 +28,34 @@
 	<div id="formulario" style="padding-left: 10px; float: right;" >
 		<h:form>
 			<h2>Selecionar</h2>
-			<label for="txtCliente">Cliente:</label>
-			<input type="text" id="txtCliente" readonly="readonly"><a id="adicionarCliente">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
-			<br />
+                        <p>
+                            <label for="txtCliente">Cliente:</label>
+                            <input type="text" id="txtCliente" readonly="readonly"><a id="adicionarCliente">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
+			</p>
 			<div style="width: 100%" id="clientes">
 				<ul id="listaClientes">	
 				</ul>
 			</div>
-			<label for="txtVeiculo">Veículo:</label>
-			<input type="text" id="txtVeiculo" readonly="readonly"><a id="adicionarVeiculo">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
-			<br />
+                        <p>
+                            <label for="txtVeiculo">Veículo:</label>
+                            <input type="text" id="txtVeiculo" readonly="readonly"><a id="adicionarVeiculo">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
+                        </p>
 			<div id="veiculos">
 				<ul id="listaVeiculos">		
 				</ul>
 			</div>
-			<label for="txtVendedor">Vendedor:</label>
-			<input type="text" id="txtVendedor" readonly="readonly"><a id="adicionarVendedor">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
-			<br />
+                        <p>
+                            <label for="txtVendedor">Vendedor:</label>
+                            <input type="text" id="txtVendedor" readonly="readonly"><a id="adicionarVendedor">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
+                        </p>
 			<div id="vendedores">
 				<ul id="listaVendedores">		
 				</ul>
 			</div>
-			<br />
-			<h:commandButton value="Cadastrar"></h:commandButton>
-                        <input type="button" id="btnCancelar" value="Cancelar"></input>                
+                        <p>
+                            <h:commandButton value="Cadastrar" class="btns"></h:commandButton>
+                            <input type="button" id="btnCancelar" value="Cancelar"></input>
+                        </p>
                     </h:form>
 	</div>
 	<div id="resposta" class="respVenda">
