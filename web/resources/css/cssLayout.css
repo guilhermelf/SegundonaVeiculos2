@@ -4,21 +4,22 @@ address {
     margin-top:100px;
     color:#FFF;
     text-align:center;
-    height:60px;
-    line-height:50px;
+    height:30px;
+    line-height:30px;
     position:fixed;
     padding: 5px;
     width: 100%;
 }
 
 #content {
+    background: url(/SegundonaVeiculos2/imagens/bg_segundona.png) no-repeat center top;
+    background-size:70%;    
     margin: 0;
     text-align: center;
-
     padding:1px;
     padding-bottom:60px;   /* Height of the footer element */
+    min-width:390px;
 }
-
 
 #bottom {
     width:100%;
@@ -175,28 +176,31 @@ input[type="submit"] {
 }
 
 .btns {
-
     clear:both;
     display:block;
-    background:url(/SegundonaVeiculos2/imagens/bg_botao.png) no-repeat;
-    width:236px !important;
-    height:69px !important;
-    line-height:69px !important;
-    padding:0 !important;
-    padding-top:20px !important;
-    margin-bottom:-18px !important;
+    width:236px;
     text-align:center;
+    padding:20px 0;
+    margin:10px;
     color:#FFF !important;
     font:16px arial !important;
-    text-decoration:none !important;
     font-weight:bold !important;
-
     cursor: pointer;
-
-    border: 0px;
+    min-width:292px;
+    background:#3aaee2;
+    -webkit-box-shadow: 6px 6px 18px -5px rgba(61,61,61,1);
+    -moz-box-shadow: 6px 6px 18px -5px rgba(61,61,61,1);
+    box-shadow: 6px 6px 18px -5px rgba(61,61,61,1);
 }
 
-input[type="submit"]:hover, .btns:hover {
+.btns:hover {
+    -webkit-box-shadow: 6px 6px 18px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 6px 6px 18px -5px rgba(0,0,0,1);
+    box-shadow: 6px 6px 18px -5px rgba(0,0,0,1);
+}
+
+
+input[type="submit"]:hover {
     color:#000;
 }
 
