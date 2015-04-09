@@ -96,9 +96,6 @@ h1 {
     height:46px;
     padding-left:5px;
     color:#FFF; 
-    font-family: helvetica; 
-    font-variant: normal;
-    font-style: normal;
     background:url(/SegundonaVeiculos2/imagens/bg_titulo.png) no-repeat;
     margin-bottom: 20px;
 }
@@ -111,71 +108,27 @@ h1 {
     background:#fff;
     -moz-box-shadow: 0 0 3px 3px #888;
     -webkit-box-shadow: 0 0 3px 3px #888;
-    box-shadow: 0 0 3px 3px #888;	
+    box-shadow: 0 0 3px 3px #888;
+    min-width:400px;
 }
 
-.login {
-    margin: 0 auto;
-    width: 450px;;
-    padding:10px;
-    background:#fff;
-    -moz-box-shadow: 0 0 1px 1px #888;
-    -webkit-box-shadow: 0 0 1px 1px #888;
-    box-shadow: 0 0 1px 1px #888;
-
-    position: relative;
-    margin-top: 25%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    border: 0px;
+.frms label {
+    float:left;
+    width:33%;
+    height:30px;
+    line-height:30px;
+    font-size: 11pt;
+    font-family: helvetica; 
+    font-variant: normal;
+    font-style: normal;
 }
 
-input[type="text"], input[type="password"] {
-    width: 188px;
-    padding: 8px 8px;
-
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #9d9e9e;
-    text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
-
-    background: #fff;
-    border: 1px solid #fff;
-    border-radius: 5px;
-
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
-    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
-    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
-}
-
-input[type="submit"] {
-    margin: 0 auto;
-    clear:both;
-    display:block;
-    background:url(/SegundonaVeiculos2/imagens/bg_botao.png) no-repeat;
-    width:236px !important;
-    height:69px !important;
-    line-height:69px !important;
-    padding:0 !important;
-    padding-top:20px !important;
-    margin-bottom:-18px !important;
-    text-align:center;
-    color:#FFF !important;
-    font:16px arial !important;
-    text-decoration:none !important;
-    font-weight:bold !important;
-
-    padding: 12px !important;
-
-    cursor: pointer;
-
-    border: 0px;
+.frms input[type="text"] {
+    width:65%;
 }
 
 .btns {
+    float:none;
     clear:both;
     display:block;
     width:236px;
@@ -183,8 +136,7 @@ input[type="submit"] {
     padding:20px 0;
     margin:10px;
     color:#FFF !important;
-    font:16px arial !important;
-    font-weight:bold !important;
+    font:bold 16px arial !important;
     cursor: pointer;
     min-width:292px;
     background:#3aaee2;
@@ -199,19 +151,37 @@ input[type="submit"] {
     box-shadow: 6px 6px 18px -5px rgba(0,0,0,1);
 }
 
-
-input[type="submit"]:hover {
-    color:#000;
+.login {
+    margin: 0 auto;
+    width: 450px;;
+    padding:10px;
+    background:#fff;
+    -moz-box-shadow: 0 0 1px 1px #888;
+    -webkit-box-shadow: 0 0 1px 1px #888;
+    box-shadow: 0 0 1px 1px #888;
+    position: relative;
+    margin-top: 25%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 0px;
 }
 
-.frms label {
-    float:left;
-    width:150px;
-    font-size: 11pt;
-    font-family: helvetica; 
-    font-variant: normal;
-    font-style: normal;
-}
+/*input[type="text"], input[type="password"] {
+    width: 188px;
+    padding: 8px 8px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9d9e9e;
+    text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}*/
 
 table {
     border-collapse: collapse;

@@ -14,16 +14,6 @@ body {
     position:relative;
 }
 
-h1 {
-    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
-    border-bottom: 0px solid #AFAFAF; 
-    font-size:  16px;
-    font-weight: bold;
-    margin: 0px;
-    padding: 0px;
-    color: #D20005;
-}
-
 a:link, a:visited {
     color: #045491;
     font-weight : bold;
@@ -43,9 +33,6 @@ h1 {
     height:46px;
     padding-left:5px;
     color:#FFF; 
-    font-family: helvetica; 
-    font-variant: normal;
-    font-style: normal;
     background:url(/SegundonaVeiculos2/imagens/bg_titulo.png) no-repeat ;
 }
 
