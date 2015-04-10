@@ -1,7 +1,9 @@
 # **Segundona Veículos 2.0**
 
 [Temática](https://github.com/guilhermelf/SegundonaVeiculos2/#tem%C3%A1tica)
+
 [Entidades e relacionamentos](https://github.com/guilhermelf/SegundonaVeiculos2/#entidades-e-relacionamentos)
+
 [Funcionalidades](https://github.com/guilhermelf/SegundonaVeiculos2/#funcionalidades)
 
 **Trabalho da disciplina de Programação para Internet II - 1/2015**
