@@ -25,38 +25,35 @@
 		<h2>Vendedor</h2>
 		<label>Nome: <span id="VendNome"></span></label><br />
 	</div>
-	<div id="formulario" style="padding-left: 10px; float: right;" >
+	<div id="formulario" style="padding-left: 10px; float: right;">
 		<h:form>
 			<h2>Selecionar</h2>
-                        <p>
                             <label for="txtCliente">Cliente:</label>
-                            <input type="text" id="txtCliente" readonly="readonly"><a id="adicionarCliente">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
-			</p>
+                               <h:inputText></h:inputText>
 			<div style="width: 100%" id="clientes">
 				<ul id="listaClientes">	
 				</ul>
 			</div>
-                        <p>
+
                             <label for="txtVeiculo">Veículo:</label>
-                            <input type="text" id="txtVeiculo" readonly="readonly"><a id="adicionarVeiculo">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
-                        </p>
+                              <h:inputText></h:inputText>
+                  
 			<div id="veiculos">
 				<ul id="listaVeiculos">		
 				</ul>
 			</div>
-                        <p>
+              
                             <label for="txtVendedor">Vendedor:</label>
-                            <input type="text" id="txtVendedor" readonly="readonly"><a id="adicionarVendedor">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
-                        </p>
+                               <h:inputText></h:inputText>
+                    
 			<div id="vendedores">
 				<ul id="listaVendedores">		
 				</ul>
 			</div>
-                        <p>
+                     
                             <h:commandButton value="Cadastrar" class="btns"></h:commandButton>
-                            <input type="button" id="btnCancelar" value="Cancelar"></input>
-                        </p>
-                    </h:form>
+                      
+                </h:form>
 	</div>
 	<div id="resposta" class="respVenda">
 		<p id="mensagem"></p>
@@ -64,7 +61,7 @@
 	<div style="clear: both;"></div>
 	<br />
 	&nbsp;
-	<a class="btns" href="./">Voltar ao menu venda</a>
+	<a class="btns" href="./vendas.xhtml">Voltar ao menu venda</a>
 	</div>
     </ui:define>
 

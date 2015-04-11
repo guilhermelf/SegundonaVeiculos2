@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./SegundonaTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="content">
+        <div id="dv-conteudo">
+            <h1>Alterar dados de venda</h1>
+
+            <div id="lista">
+                <table id="tabela">
+                    <thead>
+                        <tr>
+                            <th>Carro</th>
+                            <th>Cliente</th>
+                            <th>Vendedor</th>
+                            <th>Preço</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td><a href="#self">Excluir</a></td>
+                        </tr>
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td><a href="#self">Excluir</a></td>
+                        </tr> 
+                    </thead>
+                </table>
+            </div>
+            <br />
+            <br />
+            <h:form class="frms">
+                <h2>Atualizar Venda</h2>
+                <label for="txtCliente">Cliente:</label>
+                <h:inputText></h:inputText>
+                <div style="width: 100%" id="clientes">
+                    <ul id="listaClientes">	
+                    </ul>
+                </div>
+
+                <label for="txtVeiculo">Veículo:</label>
+                <h:inputText></h:inputText>
+
+                <div id="veiculos">
+                    <ul id="listaVeiculos">		
+                    </ul>
+                </div>
+
+                <label for="txtVendedor">Vendedor:</label>
+                <h:inputText></h:inputText>
+
+                <div id="vendedores">
+                    <ul id="listaVendedores">		
+                    </ul>
+                </div>
+
+                <h:commandButton value="Cadastrar" class="btns"></h:commandButton>
+
+            </h:form>
+
+
+            <div id="resposta">
+                <p id="mensagem"></p>
+            </div>
+            <br />
+            <a class="btns" href="./vendas.xhtml">Voltar ao menu vendas</a>
+        </div>
+    </ui:define>
+
+</ui:composition>
