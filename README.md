@@ -17,7 +17,7 @@ A temática é uma revendedora de automóveis, seria a versão 2.0, fizemos um t
 
 ####Entidades e relacionamentos:
 
-![Diagrama ER](https://github.com/guilhermelf/SegundonaVeiculos2/master/gitimg/ER.png)
+![Diagrama ER](https://raw.github.com/guilhermelf/SegundonaVeiculos2/master/gitimg/ER.png)
 
 ####Funcionalidades:
 * CRUD completo de todas as entidades.
