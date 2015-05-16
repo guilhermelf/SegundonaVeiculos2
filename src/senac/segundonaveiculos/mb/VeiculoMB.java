@@ -92,5 +92,11 @@ public class VeiculoMB {
     public void setValvulas(Integer valvulas) {
         this.valvulas = valvulas;
     }
+    
+    
+    
+    
+    
+    
 
 }
