@@ -21,10 +21,10 @@ public class ClienteMB {
     private ClienteRN clienteRN;
 
     public ClienteMB(Cliente cliente) {
-        this.cliente = cliente;
+        this.cliente = new Cliente();
+        this.clienteRN = new ClienteRN();
     }
 
-    
     public Cliente getCliente() {
         return cliente;
     }
