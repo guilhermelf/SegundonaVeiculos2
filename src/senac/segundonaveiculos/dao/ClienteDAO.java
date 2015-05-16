@@ -27,7 +27,9 @@ public class ClienteDAO implements ICrud<Cliente>{
 
     @Override
     public void salvar(Cliente bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.getTransaction().begin();
+        em.merge(bean);
+        em.getTransaction().commit();   
     }
 
     @Override

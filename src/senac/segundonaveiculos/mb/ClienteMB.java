@@ -24,6 +24,9 @@ public class ClienteMB {
         this.cliente = cliente;
     }
 
+    public void salvar() {
+        this.clienteRN.salvar(this.cliente);
+    }
     
     public Cliente getCliente() {
         return cliente;
