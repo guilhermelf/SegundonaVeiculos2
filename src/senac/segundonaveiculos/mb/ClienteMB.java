@@ -21,13 +21,17 @@ public class ClienteMB {
     private ClienteRN clienteRN;
 
     public ClienteMB(Cliente cliente) {
-        this.cliente = cliente;
+        this.cliente = new Cliente();
+        this.clienteRN = new ClienteRN();
     }
 
+<<<<<<< HEAD
     public void salvar() {
         this.clienteRN.salvar(this.cliente);
     }
     
+=======
+>>>>>>> 545873b70f7c0fa5df5060c32a4a031a9b0c89ba
     public Cliente getCliente() {
         return cliente;
     }

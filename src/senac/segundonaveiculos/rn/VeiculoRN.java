@@ -3,25 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package senac.segundonaveiculos.mb;
+package senac.segundonaveiculos.rn;
 
+import senac.segundonaveiculos.dao.VeiculoDAO;
 import senac.segundonaveiculos.entidades.Veiculo;
-import senac.segundonaveiculos.rn.VeiculoRN;
 
 /**
  *
- * @author 631310076
+ * @author 631310070
  */
-public class VeiculoMB {
-
-    private Veiculo veiculo;
-    private VeiculoRN veiculoRN;
+public class VeiculoRN {
     
-    public VeiculoMB() {
-        this.veiculo = new Veiculo();
-        this.veiculoRN = new VeiculoRN();
-    }
+    private Veiculo veiculo;
+    private VeiculoDAO veiculoDAO;
 
+    
+    public VeiculoRN() {
+        this.veiculo = new Veiculo();
+        this.veiculoDAO = new VeiculoDAO();
+    }
+    
     public Veiculo getVeiculo() {
         return veiculo;
     }
@@ -29,5 +30,8 @@ public class VeiculoMB {
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
+    
+    
+        
     
 }
