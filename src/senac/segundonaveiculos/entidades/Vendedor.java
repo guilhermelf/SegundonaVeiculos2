@@ -29,16 +29,16 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "vendedores")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Vendedore.findAll", query = "SELECT v FROM Vendedore v"),
-    @NamedQuery(name = "Vendedore.findById", query = "SELECT v FROM Vendedore v WHERE v.id = :id"),
-    @NamedQuery(name = "Vendedore.findByContaCorrente", query = "SELECT v FROM Vendedore v WHERE v.contaCorrente = :contaCorrente"),
-    @NamedQuery(name = "Vendedore.findByEmail", query = "SELECT v FROM Vendedore v WHERE v.email = :email"),
-    @NamedQuery(name = "Vendedore.findByEndereco", query = "SELECT v FROM Vendedore v WHERE v.endereco = :endereco"),
-    @NamedQuery(name = "Vendedore.findByEscolaridade", query = "SELECT v FROM Vendedore v WHERE v.escolaridade = :escolaridade"),
-    @NamedQuery(name = "Vendedore.findByNome", query = "SELECT v FROM Vendedore v WHERE v.nome = :nome"),
-    @NamedQuery(name = "Vendedore.findBySalario", query = "SELECT v FROM Vendedore v WHERE v.salario = :salario"),
-    @NamedQuery(name = "Vendedore.findByTelefone", query = "SELECT v FROM Vendedore v WHERE v.telefone = :telefone")})
-public class Vendedore implements Serializable {
+    @NamedQuery(name = "Vendedor.findAll", query = "SELECT v FROM Vendedor v"),
+    @NamedQuery(name = "Vendedor.findById", query = "SELECT v FROM Vendedor v WHERE v.id = :id"),
+    @NamedQuery(name = "Vendedor.findByContaCorrente", query = "SELECT v FROM Vendedor v WHERE v.contaCorrente = :contaCorrente"),
+    @NamedQuery(name = "Vendedor.findByEmail", query = "SELECT v FROM Vendedor v WHERE v.email = :email"),
+    @NamedQuery(name = "Vendedor.findByEndereco", query = "SELECT v FROM Vendedor v WHERE v.endereco = :endereco"),
+    @NamedQuery(name = "Vendedor.findByEscolaridade", query = "SELECT v FROM Vendedor v WHERE v.escolaridade = :escolaridade"),
+    @NamedQuery(name = "Vendedor.findByNome", query = "SELECT v FROM Vendedor v WHERE v.nome = :nome"),
+    @NamedQuery(name = "Vendedor.findBySalario", query = "SELECT v FROM Vendedor v WHERE v.salario = :salario"),
+    @NamedQuery(name = "Vendedor.findByTelefone", query = "SELECT v FROM Vendedor v WHERE v.telefone = :telefone")})
+public class Vendedor implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -70,10 +70,10 @@ public class Vendedore implements Serializable {
     @OneToMany(mappedBy = "idVendedor")
     private Collection<Venda> vendaCollection;
 
-    public Vendedore() {
+    public Vendedor() {
     }
 
-    public Vendedore(Integer id) {
+    public Vendedor(Integer id) {
         this.id = id;
     }
 
@@ -160,10 +160,10 @@ public class Vendedore implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Vendedore)) {
+        if (!(object instanceof Vendedor)) {
             return false;
         }
-        Vendedore other = (Vendedore) object;
+        Vendedor other = (Vendedor) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -172,7 +172,7 @@ public class Vendedore implements Serializable {
 
     @Override
     public String toString() {
-        return "senac.segundonaveiculos.entidades.Vendedore[ id=" + id + " ]";
+        return "senac.segundonaveiculos.entidades.Vendedor[ id=" + id + " ]";
     }
     
 }
