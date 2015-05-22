@@ -8,7 +8,7 @@ import senac.segundonaveiculos.entidades.Cliente;
 import senac.segundonaveiculos.entidades.Veiculo;
 import senac.segundonaveiculos.entidades.Vendedor;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-22T16:06:00")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-22T20:14:40")
 @StaticMetamodel(Venda.class)
 public class Venda_ { 
 
