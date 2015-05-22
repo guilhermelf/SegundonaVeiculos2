@@ -12,8 +12,8 @@ import java.util.List;
  * @author 631310070
  */
 public interface ICrud<T> {
-    public void salvar(T bean);
+    public Boolean salvar(T bean);
     public void excluir(T bean);
-    public List<T> listar(T bean);
-    public T consultar(T bean);  
+    public List<T> listar();
+    public T consultar(Integer id);  
 }

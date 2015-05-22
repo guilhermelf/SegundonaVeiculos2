@@ -21,30 +21,42 @@ public class ClienteDAO implements ICrud<Cliente>{
     private EntityManager em;
 
     public ClienteDAO() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ImobMVCJPAPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SegundonaVeiculos2PU");
         em = emf.createEntityManager();
     }
 
     @Override
-    public void salvar(Cliente bean) {
-        em.getTransaction().begin();
-        em.merge(bean);
-        em.getTransaction().commit();   
+    public Boolean salvar(Cliente bean) {
+        try {
+            
+            em.getTransaction().begin();
+            em.merge(bean);
+            em.getTransaction().commit();
+            
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+        
     }
 
     @Override
     public void excluir(Cliente bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.getTransaction().begin();
+        em.remove(bean);
+        em.getTransaction().commit();
     }
 
     @Override
-    public List<Cliente> listar(Cliente bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Cliente> listar() {
+        return em.createQuery("select c from Cliente c order by c.nome").getResultList();
     }
 
     @Override
-    public Cliente consultar(Cliente bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Cliente consultar(Integer id) {
+        Cliente cliente = em.find(Cliente.class, id);
+        
+        return cliente;
     }
     
     

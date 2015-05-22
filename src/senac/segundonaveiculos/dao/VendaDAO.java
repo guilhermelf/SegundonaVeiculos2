@@ -21,12 +21,12 @@ public class VendaDAO implements ICrud<Venda>{
     private EntityManager em;
 
     public VendaDAO() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ImobMVCJPAPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SegundonaVeiculos2PU");
         em = emf.createEntityManager();
     }
 
     @Override
-    public void salvar(Venda bean) {
+    public Boolean salvar(Venda bean) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,12 +36,12 @@ public class VendaDAO implements ICrud<Venda>{
     }
 
     @Override
-    public List<Venda> listar(Venda bean) {
+    public List<Venda> listar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Venda consultar(Venda bean) {
+    public Venda consultar(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
