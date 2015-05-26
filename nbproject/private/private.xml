@@ -3,13 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/cadastrarVenda.xhtml</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/cadastrarCliente.xhtml</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/vendedores.xhtml</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/vendas.xhtml</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/veiculos.xhtml</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/listarVenda.xhtml</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/web/resources/css/cssLayout.css</file>
+            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/mb/ClienteMB.java</file>
+            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/rn/ClienteRN.java</file>
         </group>
     </open-files>
 </project-private>
