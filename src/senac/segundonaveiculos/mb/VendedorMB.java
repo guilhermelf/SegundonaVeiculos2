@@ -5,6 +5,8 @@
  */
 package senac.segundonaveiculos.mb;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import senac.segundonaveiculos.entidades.Vendedor;
 import senac.segundonaveiculos.rn.VendedorRN;
 
@@ -12,6 +14,8 @@ import senac.segundonaveiculos.rn.VendedorRN;
  *
  * @author 631310076
  */
+@ManagedBean
+@RequestScoped
 public class VendedorMB {
 
     private VendedorRN vendedorRN;

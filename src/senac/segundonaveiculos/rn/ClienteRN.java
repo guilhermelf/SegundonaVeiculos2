@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package senac.segundonaveiculos.rn;
+import java.util.List;
 import senac.segundonaveiculos.dao.ClienteDAO;
 import senac.segundonaveiculos.entidades.Cliente;
 
@@ -21,8 +22,12 @@ public class ClienteRN {
         this.clienteDAO = new ClienteDAO();
     }
 
-    public void salvar(Cliente cliente) {
-        this.clienteDAO.salvar(cliente);
+    public Boolean salvar(Cliente cliente) {
+        return clienteDAO.salvar(cliente);
+    }
+    
+    public void excluir(Cliente cliente) {
+        clienteDAO.excluir(cliente);
     }
     
     public Cliente getCliente() {
@@ -32,4 +37,8 @@ public class ClienteRN {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     } 
+
+    public List<Cliente> listar() {
+        return clienteDAO.listar();
+    }
 }

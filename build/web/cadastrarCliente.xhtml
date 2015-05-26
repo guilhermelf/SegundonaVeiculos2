@@ -10,7 +10,16 @@
         <div id="dv-conteudo">
             <h1>Cadastro de cliente</h1>
             <div id="formulario">
-                <h:form class="frms">
+                
+                <h:form class="frms" id="frms">
+                    <p:messages />
+                    <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                        <p:graphicImage library="img" name="loading.gif" />
+                    </p:dialog>
+                    <p:dialog header="#{clienteMB.mensagem}" id="dialog" widgetVar="dialog" modal="true" draggable="false" closable="true" resizable="false" position="center center" showHeader="true">
+                        <h:outputText value="#{clienteMB.mensagem}" />
+                        
+                    </p:dialog>
                     <p>
                         <label for="txtNome">Nome:</label>
                         <p:inputText value="#{clienteMB.cliente.nome}" />                
@@ -33,19 +42,16 @@
                     </p>
                     <p>
                         <label for="txtCpf">CPF:</label>
-                        <p:inputText value="#{clienteMB.cliente.cpf}" />
+                        <p:inputText label="CPF" value="#{clienteMB.cliente.cpf}" />
                     </p>
                     <p>
                         <label for="txtCnh">CNH:</label>
                         <p:inputText value="#{clienteMB.cliente.cnh}" />
                     </p>
                     <p>
-                        <h:commandButton action="#{clienteMB.salvar()}" value="Enviar" class="btns"></h:commandButton> 
+                        <p:commandButton action="#{clienteMB.salvar()}" update="frms" onclick="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide();" value="Enviar" class="btns" /> 
                     </p>
                 </h:form>
-            </div>
-            <div id="resposta">
-                <p id="mensagem"></p>
             </div>
             <br />
             <a class="btns" href="./clientes.xhtml">Voltar ao menu cliente</a>

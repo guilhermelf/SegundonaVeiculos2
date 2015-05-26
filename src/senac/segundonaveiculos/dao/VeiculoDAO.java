@@ -21,12 +21,12 @@ public class VeiculoDAO implements ICrud<Veiculo>{
     private EntityManager em;
 
     public VeiculoDAO() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ImobMVCJPAPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SegundonaVeiculos2PU");
         em = emf.createEntityManager();
     }
 
     @Override
-    public void salvar(Veiculo bean) {
+    public Boolean salvar(Veiculo bean) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,12 +36,12 @@ public class VeiculoDAO implements ICrud<Veiculo>{
     }
 
     @Override
-    public List<Veiculo> listar(Veiculo bean) {
+    public List<Veiculo> listar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Veiculo consultar(Veiculo bean) {
+    public Veiculo consultar(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
