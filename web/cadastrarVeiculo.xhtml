@@ -1,50 +1,108 @@
 <?xml version='1.0' encoding='ISO-8859-1' ?>
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./SegundonaTemplate.xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:p="http://primefaces.org/ui">
 
     <ui:define name="content">
         <div id="dv-conteudo">
-        <h1>Cadastrar veículo</h1>
-	<div id="formulario">
-            <h:form class="frms">
-                <label for="txtNome">Nome:</label>
-                <p:inputText value="#{veiculoMB.veiculo.nome}" />
-                <br />
-                <label for="txtMarca">Marca:</label>
-                <p:inputText value="#{veiculoMB.veiculo.marca}" />
-                <br />
-                <label for="txtAno">Ano:</label>
-                <p:inputText value="#{veiculoMB.veiculo.ano}" />
-                <br />
-                <label for="txtPortas">Portas:</label>
-                <p:inputText value="#{veiculoMB.veiculo.portas}" />
-                <br />
-                <label for="txtCor">Cor:</label>
-                <p:inputText value="#{veiculoMB.veiculo.cor}" />
-                <br />
-                <label for="txtMotor">Motor:</label>
-                <p:inputText value="#{veiculoMB.veiculo.motor}" />
-                <br />
-                <label for="txtValvulas">Válvulas:</label>
-                <p:inputText value="#{veiculoMB.veiculo.valvulas}" />
-                <br />
-                <label for="txtPreco">Preço:</label>
-                <p:inputText value="#{veiculoMB.veiculo.preco}" />
-                <br />
-                <br />
-                <h:commandButton value="Enviar" action="ok" class="btns"></h:commandButton>  
-                <br />               
-            </h:form>
-	</div>
-	<div id="resposta">
-		<p id="mensagem"></p>
-	</div>
-	<br />
-	<a class="btns" href="./veiculos.xhtml">Voltar ao menu veículos</a>
-	</div>
+            <h1>Cadastrar veículo</h1>
+            <div id="formulario">
+                <h:form class="frms" id="frms">
+                    <p:messages />
+                    <p:dialog widgetVar="statusDialog" 
+                              modal="true" 
+                              draggable="false" 
+                              closable="false" 
+                              resizable="false" 
+                              showHeader="false">
+
+                        <p:graphicImage library="img" 
+                                        name="loading.gif" />
+
+                    </p:dialog>
+
+                    <p:dialog header="#{veiculoMB.mensagem}" 
+                              id="dialog" 
+                              widgetVar="dialog" 
+                              modal="true" 
+                              draggable="false" 
+                              closable="true" 
+                              resizable="false" 
+                              position="center center" 
+                              showHeader="true">
+
+                        <h:outputText value="#{veiculoMB.mensagem}" />
+
+                    </p:dialog>                    
+                    <p>
+                        <label for="txtNome">Nome:</label>
+                        <p:inputText
+                            label="Nome"
+                            required="true"
+                            value="#{veiculoMB.veiculo.nome}" />                    
+                    </p>
+                    <p>
+                        <label for="txtMarca">Marca:</label>
+                        <p:inputText
+                            label="Marca"
+                            required="true"
+                            value="#{veiculoMB.veiculo.marca}" />
+                    </p>
+                    <p>
+                        <label for="txtAno">Ano:</label>
+                        <p:inputText
+                            label="Ano"
+                            required="true"
+                            value="#{veiculoMB.veiculo.ano}" />
+                    </p>
+                    <p>
+                        <label for="txtPortas">Portas:</label>
+                        <p:inputText
+                            label="Portas"
+                            value="#{veiculoMB.veiculo.portas}" />
+                    </p>
+                    <p>
+                        <label for="txtCor">Cor:</label>
+                        <p:inputText
+                            label="Cor"
+                            value="#{veiculoMB.veiculo.cor}" />
+                    </p>
+                    <p>
+                        <label for="txtMotor">Motor:</label>
+                        <p:inputText
+                            label="Motor"
+                            value="#{veiculoMB.veiculo.motor}" />
+                    </p>
+                    <p>
+                        <label for="txtValvulas">Válvulas:</label>
+                        <p:inputText
+                            label="Válvulas"
+                            value="#{veiculoMB.veiculo.valvulas}" />
+                    </p>
+                    <p>
+                        <label for="txtPreco">Preço:</label>
+                        <p:inputText
+                            label="Preço"
+                            required="true"
+                            value="#{veiculoMB.veiculo.preco}" />
+                    </p>
+                    <p>
+                        <p:commandButton action="#{veiculoMB.salvar()}" 
+                                         update="frms" 
+                                         onclick="PF('statusDialog').show()" 
+                                         onsuccess="PF('statusDialog').hide();" 
+                                         value="Enviar" 
+                                         class="btns" /> 
+                    </p>
+                </h:form>
+            </div>
+            
+            <!--a class="btns" href="./veiculos.xhtml">Voltar ao menu veículos</a-->
+            
+        </div>
     </ui:define>
 
 </ui:composition>

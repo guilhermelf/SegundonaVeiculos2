@@ -7,6 +7,7 @@ package senac.segundonaveiculos.rn;
 
 import senac.segundonaveiculos.dao.VeiculoDAO;
 import senac.segundonaveiculos.entidades.Veiculo;
+import senac.segundonaveiculos.entidades.Vendedor;
 
 /**
  *
@@ -21,6 +22,10 @@ public class VeiculoRN {
     public VeiculoRN() {
         this.veiculo = new Veiculo();
         this.veiculoDAO = new VeiculoDAO();
+    }
+    
+    public Boolean salvar(Veiculo veiculo) {
+        return veiculoDAO.salvar(veiculo);
     }
     
     public Veiculo getVeiculo() {

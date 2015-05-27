@@ -27,17 +27,26 @@ public class VeiculoDAO implements ICrud<Veiculo>{
 
     @Override
     public Boolean salvar(Veiculo bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            em.getTransaction().begin();
+            em.merge(bean);
+            em.getTransaction().commit();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
     public void excluir(Veiculo bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.getTransaction().begin();
+        em.remove(bean);
+        em.getTransaction().commit();
     }
 
     @Override
     public List<Veiculo> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return em.createQuery("select v from Veiculo v order by v.nome").getResultList();
     }
 
     @Override

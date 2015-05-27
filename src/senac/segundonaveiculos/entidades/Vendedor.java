@@ -67,6 +67,9 @@ public class Vendedor implements Serializable {
     @Size(max = 255)
     @Column(name = "telefone")
     private String telefone;
+    @Size(max = 20)
+    @Column(name = "senha")
+    private String senha;
     @OneToMany(mappedBy = "idVendedor")
     private Collection<Venda> vendaCollection;
 
@@ -173,6 +176,14 @@ public class Vendedor implements Serializable {
     @Override
     public String toString() {
         return "senac.segundonaveiculos.entidades.Vendedor[ id=" + id + " ]";
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
     
 }

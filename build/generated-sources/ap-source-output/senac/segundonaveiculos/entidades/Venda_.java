@@ -8,15 +8,15 @@ import senac.segundonaveiculos.entidades.Cliente;
 import senac.segundonaveiculos.entidades.Veiculo;
 import senac.segundonaveiculos.entidades.Vendedor;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-22T16:06:00")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-27T17:38:47")
 @StaticMetamodel(Venda.class)
 public class Venda_ { 
 
-    public static volatile SingularAttribute<Venda, Integer> id;
+    public static volatile SingularAttribute<Venda, Date> data;
+    public static volatile SingularAttribute<Venda, Cliente> idCliente;
+    public static volatile SingularAttribute<Venda, Float> precoFinal;
     public static volatile SingularAttribute<Venda, Vendedor> idVendedor;
     public static volatile SingularAttribute<Venda, Veiculo> idVeiculo;
-    public static volatile SingularAttribute<Venda, Cliente> idCliente;
-    public static volatile SingularAttribute<Venda, Date> data;
-    public static volatile SingularAttribute<Venda, Float> precoFinal;
+    public static volatile SingularAttribute<Venda, Integer> id;
 
 }

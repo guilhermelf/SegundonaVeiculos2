@@ -27,17 +27,26 @@ public class VendedorDAO implements ICrud<Vendedor> {
 
     @Override
     public Boolean salvar(Vendedor bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            em.getTransaction().begin();
+            em.merge(bean);
+            em.getTransaction().commit();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
     public void excluir(Vendedor bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.getTransaction().begin();
+        em.remove(bean);
+        em.getTransaction().commit();
     }
 
     @Override
     public List<Vendedor> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return em.createQuery("select v from Vendedor v order by v.nome").getResultList();
     }
 
     @Override
