@@ -13,48 +13,80 @@
                 
                 <h:form class="frms" id="frms">
                     <p:messages />
-                    <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
-                        <p:graphicImage library="img" name="loading.gif" />
+                    <p:dialog widgetVar="statusDialog" 
+                              modal="true" 
+                              draggable="false" 
+                              closable="false" 
+                              resizable="false" 
+                              showHeader="false">
+                        
+                        <p:graphicImage library="img" 
+                                        name="loading.gif" />
+                    
                     </p:dialog>
-                    <p:dialog header="#{clienteMB.mensagem}" id="dialog" widgetVar="dialog" modal="true" draggable="false" closable="true" resizable="false" position="center center" showHeader="true">
+                    
+                    
+                    <p:dialog header="#{clienteMB.mensagem}" 
+                              id="dialog" 
+                              widgetVar="dialog" 
+                              modal="true" 
+                              draggable="false" 
+                              closable="true" 
+                              resizable="false" 
+                              position="center center" 
+                              showHeader="true">
+                        
                         <h:outputText value="#{clienteMB.mensagem}" />
                         
                     </p:dialog>
                     <p>
                         <label for="txtNome">Nome:</label>
-                        <p:inputText value="#{clienteMB.cliente.nome}" />                
+                        <p:inputText label="Nome"
+                                     value="#{clienteMB.cliente.nome}" />                
                     </p>
                     <p>
                         <label for="txtEmail">Email:</label>
-                        <p:inputText value="#{clienteMB.cliente.email}" />
+                        <p:inputText value="#{clienteMB.cliente.email}"
+                                     label="E-mail" />
                     </p>
                     <p>
                         <label for="txtTelefone">Telefone:</label>
-                        <p:inputText value="#{clienteMB.cliente.telefone}" />
+                        <p:inputText value="#{clienteMB.cliente.telefone}"
+                                     label="Telefone" />/>
                     </p>
                     <p>
                         <label for="txtEndereco">Endereço:</label>
-                        <p:inputText value="#{clienteMB.cliente.endereco}" />
+                        <p:inputText value="#{clienteMB.cliente.endereco}"
+                                     label="Endereço" />
                     </p>
                     <p>
                         <label for="txtRg">RG:</label>
-                        <p:inputText value="#{clienteMB.cliente.rg}" />
+                        <p:inputText value="#{clienteMB.cliente.rg}"
+                                     label="RG"/>/>
                     </p>
                     <p>
                         <label for="txtCpf">CPF:</label>
-                        <p:inputText label="CPF" value="#{clienteMB.cliente.cpf}" />
+                        <p:inputText label="CPF" 
+                                     value="#{clienteMB.cliente.cpf}" />
                     </p>
                     <p>
                         <label for="txtCnh">CNH:</label>
-                        <p:inputText value="#{clienteMB.cliente.cnh}" />
+                        <p:inputText label="CNH"
+                                     value="#{clienteMB.cliente.cnh}" />
                     </p>
                     <p>
-                        <p:commandButton action="#{clienteMB.salvar()}" update="frms" onclick="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide();" value="Enviar" class="btns" /> 
+                        <p:commandButton action="#{clienteMB.salvar()}" 
+                                         update="frms" 
+                                         onclick="PF('statusDialog').show()" 
+                                         onsuccess="PF('statusDialog').hide();" 
+                                         value="Enviar" 
+                                         class="btns" /> 
                     </p>
                 </h:form>
             </div>
             <br />
-            <a class="btns" href="./clientes.xhtml">Voltar ao menu cliente</a>
+            <a class="btns" 
+               href="./clientes.xhtml">Voltar ao menu cliente</a>
         </div>
     </ui:define>
 
