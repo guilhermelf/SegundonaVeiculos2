@@ -12,7 +12,8 @@ address {
 }
 
 #content {
-    background: url(/SegundonaVeiculos2/imagens/bg_segundona.png) no-repeat center top;
+    background: url(../img/bg_segundona.png) no-repeat center top;
+    background-color: #fff;
     background-size:70%;    
     margin: 0;
     text-align: center;
@@ -96,7 +97,7 @@ h1 {
     height:46px;
     padding-left:5px;
     color:#FFF; 
-    background:url(/SegundonaVeiculos2/imagens/bg_titulo.png) no-repeat;
+    background:url(../img/bg_titulo.png) no-repeat;
     margin-bottom: 20px;
 }
 
@@ -187,7 +188,7 @@ table {
 }
 
 thead, tfoot {
-    background:url(/SegundonaVeiculos2/imagens/bg1.png) repeat-x;
+    background:url(../img/bg1.png) repeat-x;
     text-align:left;
     height:30px;
 }
@@ -213,7 +214,7 @@ tbody th, tbody td {
 }
 
 #img_fabricio {
-    background:url(/SegundonaVeiculos2/imagens/fab_1.png) no-repeat;
+    background:url(../img/fab_1.png) no-repeat;
     width:329px;
     height:367px;
     position:absolute;
