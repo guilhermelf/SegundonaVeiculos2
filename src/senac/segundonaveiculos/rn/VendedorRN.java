@@ -24,6 +24,10 @@ public class VendedorRN {
         this.vendedorDAO = new VendedorDAO();
     }
     
+    public Vendedor logar(Vendedor vendedor) {
+        return vendedorDAO.logar(vendedor);
+    }
+    
     public Boolean salvar(Vendedor vendedor) {
         return vendedorDAO.salvar(vendedor);
     }

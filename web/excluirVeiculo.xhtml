@@ -9,55 +9,52 @@
 
     <ui:define name="content">
         <div id="dv-conteudo">
-            
-            
-            
-            
             <h1>Excluir veículo</h1>
-        <div id="lista">
-        <table id="tabela">
-         <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Marca</th>
-            <th>Ano</th>
-            <th>Portas</th>
-            <th>Cor</th>
-            <th>Motor</th>
-            <th>Válvulas</th>
-            <th>Preço</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td><a href="#self">Excluir</a></td>
-          </tr> 
-          <tr>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td><a href="#self">Excluir</a></td>
-          </tr>
-         </thead>
-        </table>
-        </div>
-        <div id="resposta">
-                <p id="mensagem"></p>
-        </div>
-        <br />
-        <!--a class="btns" href="./veiculos.xhtml">Voltar ao menu veículos</a-->
+            <h:form id="form">
+                <p:dataTable id="tabClientes" var="veiculo" value="#{veiculoMB.listar()}">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{veiculo.id}" />
+                    </p:column>
+                    <p:column headerText="Nome">
+                        <h:outputText value="#{veiculo.nome}" />
+                    </p:column>
+                    <p:column headerText="Ano">
+                        <h:outputText value="#{veiculo.ano}" />
+                    </p:column>
+                    <p:column headerText="Marca">
+                        <h:outputText value="#{veiculo.marca}" />
+                    </p:column>
+                    <p:column headerText="Motor">
+                        <h:outputText value="#{veiculo.motor}" />
+                    </p:column>                    
+                    <p:column headerText="Válvulas">
+                        <h:outputText value="#{veiculo.valvulas}" />
+                    </p:column>
+                    <p:column headerText="Cor">
+                        <h:outputText value="#{veiculo.cor}" />
+                    </p:column>
+                    <p:column headerText="Portas">
+                        <h:outputText value="#{veiculo.portas}" />
+                    </p:column>   
+                    <p:column headerText="Preço">
+                        <h:outputText value="#{veiculo.preco}" />
+                    </p:column>       
+                    <p:column style="width:32px;text-align: center">
+                        <p:commandButton update=":form:tabClientes" action="#{veiculoMB.excluir()}" icon="ui-icon-closethick" title="Excluir">
+                            <p:confirm header="Confirmação" message="Deseja deletar o cliente #{veiculo.nome} do sistema?" icon="ui-icon-alert" />
+                            <p:confirmDialog global="true" showEffect="fade" >
+                                <div class="center-button">
+                                    <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                                    <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                                </div>
+                            </p:confirmDialog>
+                            <f:setPropertyActionListener value="#{veiculo}" target="#{veiculoMB.veiculo}" />
+                        </p:commandButton>
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+            <br />
+            <!--a class="btns" href="./veiculos.xhtml">Voltar ao menu veículos</a-->
         </div>
     </ui:define>
 

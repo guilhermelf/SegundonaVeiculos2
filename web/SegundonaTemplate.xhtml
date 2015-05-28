@@ -17,8 +17,10 @@
     </h:head>
 
     <h:body>
+        
         <div id="wrapper">
             <div id="content" class="center_content">
+                <h:form>
                 <nav class="navbar navbar-default" style="width:70%;margin:0 auto;background:#e5e5e5;">
                     <div class="container-fluid">
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,10 +64,17 @@
                                         <li><a href="./excluirVenda.xhtml">Exluir</a></li>
                                     </ul>
                                 </li>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown">
+
+                                        <p:commandLink action="#{vendedorMB.deslogar()}" class="dropdown-toggle" value="Sair" />
+                                    </li>
+                                </ul>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
+                </h:form>
                 <ui:insert name="content">Content</ui:insert>
             </div>
             <ui:insert name="bottom"></ui:insert>
