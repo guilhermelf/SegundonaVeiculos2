@@ -27,7 +27,14 @@ public class VendaDAO implements ICrud<Venda>{
 
     @Override
     public Boolean salvar(Venda bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            em.getTransaction().begin();
+            em.merge(bean);
+            em.getTransaction().commit();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override

@@ -3,67 +3,65 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./SegundonaTemplate.xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="content">
+        <h:form id="frms">
+            <p:messages />
+                    <p:dialog widgetVar="statusDialog" 
+                              modal="true" 
+                              draggable="false" 
+                              closable="false" 
+                              resizable="false" 
+                              showHeader="false">
+                        
+                        <p:graphicImage library="img" 
+                                        name="loading.gif" />
+                    
+                    </p:dialog>
+                    
+                    
+                    <p:dialog header="#{vendaMB.mensagem}" 
+                              id="dialog" 
+                              widgetVar="dialog" 
+                              modal="true" 
+                              draggable="false" 
+                              closable="true" 
+                              resizable="false" 
+                              position="center center" 
+                              showHeader="true">
+                        
+                        <h:outputText value="#{vendaMB.mensagem}" />
+                        
+                    </p:dialog>
         <div id="dv-conteudo">
             <h1>Registrar Venda</h1>
-            <div id="dadosVenda" class="venda" style="width: 400px; float: left; overflow: hidden;">
-                <h2>Informações da venda:</h2>
-                <h2>Cliente</h2>
-                <label>Nome: <span id="CNome"></span></label><br />
-                <div id="rg">
-                    <label>RG: <span id="CRg"></span></label><br />
-                    <label>CPF: <span id="CCpf"></span></label><br />
-                </div>	
-                <label>Endereço: <span id="CEndereco"></span></label><br />
-                <h2>Veículo</h2>
-                <label>Nome: <span id="VNome"></span></label><br />
-                <label>Tipo: <span id="VTipo"></span></label><br />
-                <label>Marca: <span id="VMarca"></span></label><br />
+            <div style="background-color: #fff; width: 350px;">  
+                <h2>Selecionar</h2>
+                <label>Cliente:</label>
+                <h:selectOneMenu id="cliente" value="#{vendaMB.idCliente}">
+                    <f:selectItems value="#{clienteMB.listar()}" var="cliente" itemLabel="#{cliente.nome}" itemValue="#{cliente.id}" />
+                </h:selectOneMenu>
+                
+                <label>Veículo:</label>
+                <h:selectOneMenu id="veiculo" value="#{vendaMB.idVeiculo}">
+                    <f:selectItems value="#{veiculoMB.listar()}" var="veiculo" itemLabel="#{veiculo.nome}" itemValue="#{veiculo.id}" />
+                </h:selectOneMenu>
+
+                
+                <p:spacer height="10px" />
                 <br />
-                <label>Preço: <span id="VPreco"></span></label><br />
-                <h2>Vendedor</h2>
-                <label>Nome: <span id="VendNome"></span></label><br />
+                <p:commandButton style="width: 50px;" 
+                                        onclick="PF('statusDialog').show()" 
+                                         onsuccess="PF('statusDialog').hide();" 
+                                         value="Enviar" 
+                                         class="btns" 
+                                         action="#{vendaMB.salvar()}" update="frms" />       
             </div>
-            <div id="formulario" style="padding-left: 10px; float: right;">
-                <h:form>
-                    <h2>Selecionar</h2>
-                    <label for="txtCliente">Cliente:</label>
-                    <h:inputText></h:inputText>
-                    <div style="width: 100%" id="clientes">
-                        <ul id="listaClientes">	
-                        </ul>
-                    </div>
-
-                    <label for="txtVeiculo">Veículo:</label>
-                    <h:inputText></h:inputText>
-
-                    <div id="veiculos">
-                        <ul id="listaVeiculos">		
-                        </ul>
-                    </div>
-
-                    <label for="txtVendedor">Vendedor:</label>
-                    <h:inputText></h:inputText>
-
-                    <div id="vendedores">
-                        <ul id="listaVendedores">		
-                        </ul>
-                    </div>
-
-                    <h:commandButton value="Cadastrar" class="btns"></h:commandButton>
-
-                </h:form>
-            </div>
-            <div id="resposta" class="respVenda">
-                <p id="mensagem"></p>
-            </div>
-            <div style="clear: both;"></div>
-            <br />
-            &nbsp;
-            <!--a class="btns" href="./vendas.xhtml">Voltar ao menu venda</a-->
         </div>
+        </h:form>
     </ui:define>
 
 </ui:composition>

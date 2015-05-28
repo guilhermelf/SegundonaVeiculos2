@@ -49,13 +49,13 @@ public class Venda implements Serializable {
     private Float precoFinal;
     @JoinColumn(name = "id_cliente", referencedColumnName = "id")
     @ManyToOne
-    private Cliente idCliente;
+    private Cliente cliente;
     @JoinColumn(name = "id_veiculo", referencedColumnName = "id")
     @ManyToOne
-    private Veiculo idVeiculo;
+    private Veiculo veiculo;
     @JoinColumn(name = "id_vendedor", referencedColumnName = "id")
     @ManyToOne
-    private Vendedor idVendedor;
+    private Vendedor vendedor;
 
     public Venda() {
     }
@@ -88,28 +88,28 @@ public class Venda implements Serializable {
         this.precoFinal = precoFinal;
     }
 
-    public Cliente getIdCliente() {
-        return idCliente;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setIdCliente(Cliente idCliente) {
-        this.idCliente = idCliente;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
-    public Veiculo getIdVeiculo() {
-        return idVeiculo;
+    public Veiculo getVeiculo() {
+        return veiculo;
     }
 
-    public void setIdVeiculo(Veiculo idVeiculo) {
-        this.idVeiculo = idVeiculo;
+    public void setVeiculo(Veiculo Veiculo) {
+        this.veiculo = Veiculo;
     }
 
-    public Vendedor getIdVendedor() {
-        return idVendedor;
+    public Vendedor getVendedor() {
+        return vendedor;
     }
 
-    public void setIdVendedor(Vendedor idVendedor) {
-        this.idVendedor = idVendedor;
+    public void setVendedor(Vendedor Vendedor) {
+        this.vendedor = Vendedor;
     }
 
     @Override

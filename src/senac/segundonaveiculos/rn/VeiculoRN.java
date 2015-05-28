@@ -25,6 +25,10 @@ public class VeiculoRN {
         this.veiculoDAO = new VeiculoDAO();
     }
     
+    public Veiculo consultar(Integer id) {
+        return veiculoDAO.consultar(id);
+    }
+    
     public Boolean salvar(Veiculo veiculo) {
         return veiculoDAO.salvar(veiculo);
     }

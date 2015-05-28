@@ -66,7 +66,7 @@ public class Cliente implements Serializable {
     @Size(max = 30)
     @Column(name = "telefone")
     private String telefone;
-    @OneToMany(mappedBy = "idCliente")
+    @OneToMany(mappedBy = "cliente")
     private Collection<Venda> vendaCollection;
 
     public Cliente() {

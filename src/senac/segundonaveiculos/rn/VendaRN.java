@@ -21,6 +21,10 @@ public class VendaRN {
         this.venda = new Venda();
         this.vendaDAO = new VendaDAO();
     }
+    
+    public boolean salvar(Venda venda) {
+        return vendaDAO.salvar(venda);
+    }
 
     public Venda getVenda() {
         return venda;

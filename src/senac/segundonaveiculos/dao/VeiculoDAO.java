@@ -51,7 +51,8 @@ public class VeiculoDAO implements ICrud<Veiculo>{
 
     @Override
     public Veiculo consultar(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        Veiculo veiculo = em.find(Veiculo.class, id);
+        
+        return veiculo;
+    }  
 }
