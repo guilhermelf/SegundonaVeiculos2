@@ -8,60 +8,70 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="content">
-        <h:form id="frms">
-            <p:messages />
-                    <p:dialog widgetVar="statusDialog" 
-                              modal="true" 
-                              draggable="false" 
-                              closable="false" 
-                              resizable="false" 
-                              showHeader="false">
-                        
-                        <p:graphicImage library="img" 
-                                        name="loading.gif" />
-                    
-                    </p:dialog>
-                    
-                    
-                    <p:dialog header="#{vendaMB.mensagem}" 
-                              id="dialog" 
-                              widgetVar="dialog" 
-                              modal="true" 
-                              draggable="false" 
-                              closable="true" 
-                              resizable="false" 
-                              position="center center" 
-                              showHeader="true">
-                        
-                        <h:outputText value="#{vendaMB.mensagem}" />
-                        
-                    </p:dialog>
+
         <div id="dv-conteudo">
             <h1>Registrar Venda</h1>
-            <div style="background-color: #fff; width: 350px;">  
-                <h2>Selecionar</h2>
-                <label>Cliente:</label>
-                <h:selectOneMenu id="cliente" value="#{vendaMB.idCliente}">
-                    <f:selectItems value="#{clienteMB.listar()}" var="cliente" itemLabel="#{cliente.nome}" itemValue="#{cliente.id}" />
-                </h:selectOneMenu>
-                
-                <label>Veículo:</label>
-                <h:selectOneMenu id="veiculo" value="#{vendaMB.idVeiculo}">
-                    <f:selectItems value="#{veiculoMB.listar()}" var="veiculo" itemLabel="#{veiculo.nome}" itemValue="#{veiculo.id}" />
-                </h:selectOneMenu>
+            <h:form id="frms" class="frms">
+                <p:messages />
+                <p:dialog widgetVar="statusDialog" 
+                          modal="true" 
+                          draggable="false" 
+                          closable="false" 
+                          resizable="false" 
+                          showHeader="false">
 
-                
-                <p:spacer height="10px" />
-                <br />
-                <p:commandButton style="width: 50px;" 
-                                        onclick="PF('statusDialog').show()" 
-                                         onsuccess="PF('statusDialog').hide();" 
-                                         value="Enviar" 
-                                         class="btns" 
-                                         action="#{vendaMB.salvar()}" update="frms" />       
-            </div>
+                    <p:graphicImage library="img" 
+                                    name="loading.gif" />
+
+                </p:dialog>
+
+                <p:dialog header="#{vendaMB.mensagem}" 
+                          id="dialog" 
+                          widgetVar="dialog" 
+                          modal="true" 
+                          draggable="false" 
+                          closable="true" 
+                          resizable="false" 
+                          position="center center" 
+                          showHeader="true">
+
+                    <h:outputText value="#{vendaMB.mensagem}" />
+
+                </p:dialog>
+
+                <div style="background-color: #fff; width: 350px;">  
+                    
+                    <p>
+                        <h2>Selecione os dados</h2>
+                    </p>
+                    
+                    <p>
+                        <label>Cliente:</label>
+                        <h:selectOneMenu id="cliente" value="#{vendaMB.idCliente}">
+                            <f:selectItem itemValue="0" itemLabel="Selecione" />
+                            <f:selectItems value="#{clienteMB.listar()}" var="cliente" itemLabel="#{cliente.nome}" itemValue="#{cliente.id}" />
+                        </h:selectOneMenu>
+                    </p>
+
+                    <p>
+                        <label>Veículo:</label>
+                        <h:selectOneMenu id="veiculo" value="#{vendaMB.idVeiculo}">
+                            <f:selectItem itemValue="0" itemLabel="Selecione" />
+                            <f:selectItems value="#{veiculoMB.listar()}" var="veiculo" itemLabel="#{veiculo.nome}" itemValue="#{veiculo.id}" />
+                        </h:selectOneMenu>
+                    </p>
+
+                    <br />
+                    <p:commandButton style="width: 50px;" 
+                                     onclick="PF('statusDialog').show()" 
+                                     onsuccess="PF('statusDialog').hide();" 
+                                     value="Enviar" 
+                                     class="btns" 
+                                     action="#{vendaMB.salvar()}" update="frms" />       
+                </div>
+
+            </h:form>
         </div>
-        </h:form>
     </ui:define>
 
 </ui:composition>

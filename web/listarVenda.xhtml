@@ -3,76 +3,83 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./SegundonaTemplate.xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="content">
         <div id="dv-conteudo">
-            <h1>Alterar dados de venda</h1>
-
+            <h1>Listar Venda</h1>
             <div id="lista">
-                <table id="tabela">
-                    <thead>
-                        <tr>
-                            <th>Carro</th>
-                            <th>Cliente</th>
-                            <th>Vendedor</th>
-                            <th>Preço</th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td><a href="#self">Excluir</a></td>
-                        </tr>
-                        <tr>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td><a href="#self">Excluir</a></td>
-                        </tr> 
-                    </thead>
-                </table>
+                <h:form id="form">
+                    <p:messages autoUpdate="true"/>
+                    <p:dataTable
+                        id="tabVendas" 
+                        var="venda" 
+                        value="#{vendaMB.listar()}" 
+                        rows="10"
+                        editable="true"
+                        paginator="true"
+                        paginatorPosition="bottom"
+                        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                        rowsPerPageTemplate="5,10,15">
+
+                        <p:ajax event="rowEdit" listener="#{vendaMB.onRowEdit}" update=":form:tabVendas"/>
+
+                        <p:column headerText="Id">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{venda.id}" /></f:facet>
+                                <f:facet name="input"><p:inputText readonly="true" value="#{venda.id}" /></f:facet>         
+                            </p:cellEditor>
+                        </p:column>
+
+                        <p:column headerText="Preço">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{venda.precoFinal}"><f:convertNumber currencySymbol="R$ " type="currency" /></h:outputText></f:facet>
+                                <f:facet name="input"><p:inputText value="#{venda.precoFinal}"><f:convertNumber currencySymbol="R$ " type="currency" /></p:inputText></f:facet>         
+                            </p:cellEditor>
+                        </p:column>
+
+                        <p:column headerText="Cliente">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{venda.cliente.nome}" /></f:facet>
+                                <f:facet name="input"><p:inputText value="#{venda.cliente.nome}" /></f:facet>         
+                            </p:cellEditor>
+                        </p:column>
+
+                        <p:column headerText="Veículo">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{venda.veiculo.nome}" /></f:facet>
+                                <f:facet name="input"><p:inputText value="#{venda.veiculo.nome}" /></f:facet>
+                            </p:cellEditor>
+                        </p:column>
+
+                        <p:column headerText="Marca">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{venda.veiculo.marca}" /></f:facet>
+                                <f:facet name="input"><p:inputText value="#{venda.veiculo.marca}" /></f:facet>
+                            </p:cellEditor>
+                        </p:column>
+
+                        <p:column style="width:32px;text-align: center">
+                            <p:commandButton update=":form:tabVendas" action="#{vendaMB.excluir()}" icon="ui-icon-closethick" title="Excluir">
+                                <p:confirm header="Confirmação" message="Deseja deletar a venda #{venda.id} do sistema?" icon="ui-icon-alert" />
+                                <p:confirmDialog global="true" showEffect="fade" >
+                                    <div class="center-button">
+                                        <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                                        <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                                    </div>
+                                </p:confirmDialog>
+                                <f:setPropertyActionListener value="#{venda}" target="#{vendaMB.venda}" />
+                            </p:commandButton>
+                        </p:column>                        
+
+                    </p:dataTable>
+                </h:form>
             </div>
-            <br />
-            <br />
-            <h:form class="frms">
-                <h2>Atualizar Venda</h2>
-                <label for="txtCliente">Cliente:</label>
-                <h:inputText></h:inputText>
-                <div style="width: 100%" id="clientes">
-                    <ul id="listaClientes">	
-                    </ul>
-                </div>
 
-                <label for="txtVeiculo">Veículo:</label>
-                <h:inputText></h:inputText>
+            <!--a class="btns" href="./clientes.xhtml">Voltar ao menu cliente</a-->
 
-                <div id="veiculos">
-                    <ul id="listaVeiculos">		
-                    </ul>
-                </div>
-
-                <label for="txtVendedor">Vendedor:</label>
-                <h:inputText></h:inputText>
-
-                <div id="vendedores">
-                    <ul id="listaVendedores">		
-                    </ul>
-                </div>
-
-                <h:commandButton value="Cadastrar" class="btns"></h:commandButton>
-
-            </h:form>
-
-
-            <div id="resposta">
-                <p id="mensagem"></p>
-            </div>
-            <br />
-            <!--a class="btns" href="./vendas.xhtml">Voltar ao menu vendas</a-->
         </div>
     </ui:define>
 

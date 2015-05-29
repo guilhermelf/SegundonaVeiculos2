@@ -37,7 +37,9 @@
                         <h:outputText value="#{veiculo.portas}" />
                     </p:column>   
                     <p:column headerText="Preço">
-                        <h:outputText value="#{veiculo.preco}" />
+                        <h:outputText value="#{veiculo.preco}">
+                            <f:convertNumber currencySymbol="R$ " type="currency" />
+                        </h:outputText>
                     </p:column>       
                     <p:column style="width:32px;text-align: center">
                         <p:commandButton update=":form:tabClientes" action="#{veiculoMB.excluir()}" icon="ui-icon-closethick" title="Excluir">

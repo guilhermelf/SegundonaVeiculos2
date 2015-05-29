@@ -83,8 +83,8 @@
                     
                     <p:column headerText="Preço">
                         <p:cellEditor>
-                            <f:facet name="output"><h:outputText value="#{veiculo.preco}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.preco}" style="width:100%"/></f:facet>         
+                            <f:facet name="output"><h:outputText value="#{veiculo.preco}"><f:convertNumber currencySymbol="R$ " type="currency" /></h:outputText></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.preco}" style="width:100%"><f:convertNumber currencySymbol="R$" type="currency" /></p:inputText></f:facet>         
                         </p:cellEditor>
                     </p:column>
                     

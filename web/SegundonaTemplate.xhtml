@@ -24,7 +24,13 @@
                 <nav class="navbar navbar-default" style="width:70%;margin:0 auto;background:#e5e5e5;">
                     <div class="container-fluid">
                         <!-- Collect the nav links, forms, and other content for toggling -->
+                        
                         <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="principal.xhtml">Principal</a>
+                                </li>
+                            </ul>
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vendedores<span class="caret"></span></a>
@@ -61,12 +67,11 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="./cadastrarVenda.xhtml">Cadastrar</a></li>
                                         <li><a href="./listarVenda.xhtml">Listar</a></li>
-                                        <li><a href="./excluirVenda.xhtml">Exluir</a></li>
+                                        <!--li><a href="./excluirVenda.xhtml">Exluir</a></li-->
                                     </ul>
                                 </li>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="dropdown">
-
                                         <p:commandLink action="#{vendedorMB.deslogar()}" class="dropdown-toggle" value="Sair" />
                                     </li>
                                 </ul>

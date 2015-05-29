@@ -5,7 +5,9 @@
  */
 package senac.segundonaveiculos.rn;
 
+import java.util.List;
 import senac.segundonaveiculos.dao.VendaDAO;
+import senac.segundonaveiculos.entidades.Cliente;
 import senac.segundonaveiculos.entidades.Venda;
 
 /**
@@ -34,4 +36,12 @@ public class VendaRN {
         this.venda = venda;
     }
 
+    public List<Venda> listar() {
+        return vendaDAO.listar();
+    }
+    
+    public void excluir(Venda venda) {
+        vendaDAO.excluir(venda);
+    }
+    
 }

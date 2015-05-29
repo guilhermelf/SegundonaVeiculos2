@@ -20,7 +20,7 @@
                     <h:inputSecret value="#{vendedorMB.vendedor.senha}"></h:inputSecret>
                 </p>
                 <p>
-                    <h:commandButton value="Logar" action="#{vendedorMB.logar()}"></h:commandButton>
+                    <h:commandButton value="Acessar o sistema" action="#{vendedorMB.logar()}"></h:commandButton>
                 </p>
             </h:form>
         </div>
@@ -29,7 +29,7 @@
             var animacao;
             $(function () {
                 $('body').css('overflow:hidden');
-                $('.login input[type="text"]').first().blur(function(){
+                $('.login input[type="text"]').first().select().focus().blur(function(){
                     if($(this).val() == "naofoimao") {
                         $('#img_fabricio').show().addClass('slideUp');
                         animacao = window.setTimeout('removeAnimacao();',2000);

@@ -39,12 +39,14 @@ public class VendaDAO implements ICrud<Venda>{
 
     @Override
     public void excluir(Venda bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.getTransaction().begin();
+        em.remove(bean);
+        em.getTransaction().commit();
     }
 
     @Override
     public List<Venda> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return em.createQuery("select v from Venda v order by v.id DESC").getResultList();
     }
 
     @Override
