@@ -22,6 +22,10 @@ public class ClienteRN {
         this.clienteDAO = new ClienteDAO();
     }
 
+    public Cliente consultar(Integer id) {
+        return clienteDAO.consultar(id);
+    }
+    
     public Boolean salvar(Cliente cliente) {
         return clienteDAO.salvar(cliente);
     }

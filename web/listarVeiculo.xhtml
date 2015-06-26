@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='ISO-8859-1' ?>
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./SegundonaTemplate.xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:p="http://primefaces.org/ui"
@@ -29,7 +30,14 @@
                     <p:column headerText="Id">
                         <p:cellEditor>
                             <f:facet name="output"><h:outputText value="#{veiculo.id}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.id}" style="width:100%"/></f:facet>         
+                            <f:facet name="input"><p:inputText readonly="true" value="#{veiculo.id}" style="width:100%"/></f:facet>         
+                        </p:cellEditor>
+                    </p:column>
+                    
+                    <p:column headerText="Ano">
+                        <p:cellEditor>
+                            <f:facet name="output"><h:outputText value="#{veiculo.ano}" /></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.ano}" style="width:100%"/></f:facet>         
                         </p:cellEditor>
                     </p:column>
                     
@@ -40,38 +48,43 @@
                         </p:cellEditor>
                     </p:column>
                     
-                    <p:column headerText="E-mail">
+                    <p:column headerText="Marca">
                         <p:cellEditor>
-                            <f:facet name="output"><h:outputText value="#{veiculo.email}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.email}" style="width:100%"/></f:facet>         
+                            <f:facet name="output"><h:outputText value="#{veiculo.marca}" /></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.marca}" style="width:100%"/></f:facet>         
+                        </p:cellEditor>
+                    </p:column>
+                    <p:column headerText="Cor">
+                        <p:cellEditor>
+                            <f:facet name="output"><h:outputText value="#{veiculo.cor}" /></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.cor}" style="width:100%"/></f:facet>         
+                        </p:cellEditor>
+                    </p:column>
+                    <p:column headerText="Motor">
+                        <p:cellEditor>
+                            <f:facet name="output"><h:outputText value="#{veiculo.motor}" /></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.motor}" style="width:100%"/></f:facet>         
                         </p:cellEditor>
                     </p:column>
                     
-                    <p:column headerText="Endereço">
+                    <p:column headerText="Portas">
                         <p:cellEditor>
-                            <f:facet name="output"><h:outputText value="#{veiculo.endereco}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.endereco}" style="width:100%"/></f:facet>         
+                            <f:facet name="output"><h:outputText value="#{veiculo.portas}" /></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.portas}" style="width:100%"/></f:facet>         
                         </p:cellEditor>
                     </p:column>
                     
-                    <p:column headerText="RG">
+                    <p:column headerText="Válvulas">
                         <p:cellEditor>
-                            <f:facet name="output"><h:outputText value="#{veiculo.contaCorrente}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.contaCorrente}" style="width:100%"/></f:facet>         
+                            <f:facet name="output"><h:outputText value="#{veiculo.valvulas}" /></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.valvulas}" style="width:100%"/></f:facet>         
                         </p:cellEditor>
-                    </p:column>
+                    </p:column>                   
                     
-                    <p:column headerText="Telefone">
+                    <p:column headerText="Preço">
                         <p:cellEditor>
-                            <f:facet name="output"><h:outputText value="#{veiculo.telefone}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.telefone}" style="width:100%"/></f:facet>         
-                        </p:cellEditor>
-                    </p:column>
-
-                    <p:column headerText="Telefone">
-                        <p:cellEditor>
-                            <f:facet name="output"><h:outputText value="#{veiculo.salario}" /></f:facet>
-                            <f:facet name="input"><p:inputText value="#{veiculo.salario}" style="width:100%"/></f:facet>         
+                            <f:facet name="output"><h:outputText value="#{veiculo.preco}"><f:convertNumber currencySymbol="R$ " type="currency" /></h:outputText></f:facet>
+                            <f:facet name="input"><p:inputText value="#{veiculo.preco}" style="width:100%"><f:convertNumber currencySymbol="R$" type="currency" /></p:inputText></f:facet>         
                         </p:cellEditor>
                     </p:column>
                     

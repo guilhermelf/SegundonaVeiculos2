@@ -8,7 +8,9 @@ package senac.segundonaveiculos.dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import senac.segundonaveiculos.entidades.Vendedor;
 import senac.segundonaveiculos.util.ICrud;
 
@@ -52,6 +54,19 @@ public class VendedorDAO implements ICrud<Vendedor> {
     @Override
     public Vendedor consultar(Integer id) {
         return (Vendedor) em.createQuery("select v from Vendedor v WHERE v.id = "+id+" order by v.nome").getResultList();
+    }
+
+    public Vendedor logar(Vendedor vendedor) {
+        try {
+            Query query = em.createQuery("select v from Vendedor v where v.email = :email and v.senha = :senha");
+            query.setParameter("email", vendedor.getEmail());
+            query.setParameter("senha", vendedor.getSenha());
+
+            return (Vendedor) query.getSingleResult();
+        
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 
 }

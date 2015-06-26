@@ -5,9 +5,15 @@
  */
 package senac.segundonaveiculos.mb;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.RowEditEvent;
 import senac.segundonaveiculos.entidades.Cliente;
@@ -25,6 +31,39 @@ public class VendedorMB {
     private Vendedor vendedor;
     private VendedorRN vendedorRN;
     private String mensagem = "";
+    
+    public void deslogar() {
+
+        try {
+            HttpSession sessao = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
+            sessao.invalidate();
+            System.out.println("--------------------------");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
+        } catch (IOException ex) {
+            Logger.getLogger(VendedorMB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    public String logar() {
+        Vendedor logado = new VendedorRN().logar(vendedor);
+        
+        if(logado != null) {
+            HttpSession sessao = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
+            
+            sessao.setAttribute("usuario", logado);
+            
+            return "principal?faces-redirect=true";
+        } else {
+            FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Usuário e/ou senha incorreto(s)!",
+                            "Tente novamente.")); 
+            
+            return "";
+        }
+    }
     
     public String salvar() {
         

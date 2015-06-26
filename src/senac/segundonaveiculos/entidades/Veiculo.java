@@ -68,7 +68,7 @@ public class Veiculo implements Serializable {
     private Float preco;
     @Column(name = "valvulas")
     private Integer valvulas;
-    @OneToMany(mappedBy = "idVeiculo")
+    @OneToMany(mappedBy = "Veiculo")
     private Collection<Venda> vendaCollection;
 
     public Veiculo() {

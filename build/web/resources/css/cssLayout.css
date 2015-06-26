@@ -23,6 +23,10 @@ address {
 }
 
 #bottom {
+<<<<<<< HEAD
+=======
+    background-color: #fff;
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
     width:100%;
     height:60px;
     position:absolute;
@@ -104,6 +108,7 @@ h1 {
 .frms {
     text-align: left;
     width: 50% !important;
+<<<<<<< HEAD
     width:auto;
     padding:10px;
     background:#fff;
@@ -111,17 +116,34 @@ h1 {
     -webkit-box-shadow: 0 0 3px 3px #888;
     box-shadow: 0 0 3px 3px #888;
     min-width:400px;
+=======
+    padding:10px;
+    background:#fff;
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    min-width:550px;
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
 }
 
 .frms label {
     float:left;
+<<<<<<< HEAD
     width:33%;
+=======
+    width:22%;
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
     height:30px;
     line-height:30px;
     font-size: 11pt;
     font-family: helvetica; 
     font-variant: normal;
     font-style: normal;
+<<<<<<< HEAD
+=======
+    text-align: right;
+    padding-right:4px;
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
 }
 
 .frms input[type="text"] {

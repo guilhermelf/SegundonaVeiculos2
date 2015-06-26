@@ -5,11 +5,12 @@
  */
 package senac.segundonaveiculos.mb;
 
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import org.primefaces.context.RequestContext;
+import org.primefaces.event.RowEditEvent;
 import senac.segundonaveiculos.entidades.Veiculo;
-import senac.segundonaveiculos.entidades.Vendedor;
 import senac.segundonaveiculos.rn.VeiculoRN;
 
 /**
@@ -43,6 +44,14 @@ public class VeiculoMB {
         }
     }
     
+    public void excluir() {
+        veiculoRN.excluir(veiculo);
+    }
+
+    public void onRowEdit(RowEditEvent event) {        
+        veiculoRN.salvar((Veiculo) event.getObject());
+    }
+
     public Veiculo getVeiculo() {
         return veiculo;
     }
@@ -50,6 +59,10 @@ public class VeiculoMB {
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
     }
+    
+    public List<Veiculo> listar() {
+        return veiculoRN.listar();
+    }    
 
     public String getMensagem() {
         return mensagem;
@@ -57,6 +70,5 @@ public class VeiculoMB {
 
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
-    }
-    
+    }   
 }

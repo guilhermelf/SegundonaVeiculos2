@@ -2,12 +2,19 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" 
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+<<<<<<< HEAD
                 template="./SegundonaTemplate.xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html">
+=======
+                template="./LoginTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
 
     <ui:define name="content">
         <div id="dv-conteudo">
             <h:form class="login">
+<<<<<<< HEAD
                 <h2>Acesso ao sistema</h2>
                 <p>
                     <label>Usuário</label>
@@ -19,6 +26,20 @@
                 </p>
                 <p>
                     <h:commandButton value="Logar" action="principal"></h:commandButton>
+=======
+                <p:messages globalOnly="true" autoUpdate="true" />
+                <h2>Acesso ao sistema</h2>
+                <p>
+                    <label>E-mail</label>
+                    <h:inputText value="#{vendedorMB.vendedor.email}"></h:inputText>
+                </p>
+                <p>
+                    <label>Senha</label>
+                    <h:inputSecret value="#{vendedorMB.vendedor.senha}"></h:inputSecret>
+                </p>
+                <p>
+                    <h:commandButton value="Acessar o sistema" action="#{vendedorMB.logar()}"></h:commandButton>
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
                 </p>
             </h:form>
         </div>
@@ -27,7 +48,11 @@
             var animacao;
             $(function () {
                 $('body').css('overflow:hidden');
+<<<<<<< HEAD
                 $('.login input[type="text"]').first().blur(function(){
+=======
+                $('.login input[type="text"]').first().select().focus().blur(function(){
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
                     if($(this).val() == "naofoimao") {
                         $('#img_fabricio').show().addClass('slideUp');
                         animacao = window.setTimeout('removeAnimacao();',2000);

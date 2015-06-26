@@ -51,7 +51,14 @@ public class VeiculoDAO implements ICrud<Veiculo>{
 
     @Override
     public Veiculo consultar(Integer id) {
+<<<<<<< HEAD
         return (Veiculo) em.createQuery("select v from Veiculo v where v.id = "+id+" order by v.nome").getSingleResult();
     }
     
+=======
+        Veiculo veiculo = em.find(Veiculo.class, id);
+        
+        return veiculo;
+    }  
+>>>>>>> d66391db86d988def994737d13b789f93cede9c7
 }

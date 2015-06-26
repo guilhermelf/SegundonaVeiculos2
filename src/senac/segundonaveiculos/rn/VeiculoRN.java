@@ -5,9 +5,10 @@
  */
 package senac.segundonaveiculos.rn;
 
+import java.util.List;
 import senac.segundonaveiculos.dao.VeiculoDAO;
 import senac.segundonaveiculos.entidades.Veiculo;
-import senac.segundonaveiculos.entidades.Vendedor;
+import senac.segundonaveiculos.entidades.Veiculo;
 
 /**
  *
@@ -24,6 +25,10 @@ public class VeiculoRN {
         this.veiculoDAO = new VeiculoDAO();
     }
     
+    public Veiculo consultar(Integer id) {
+        return veiculoDAO.consultar(id);
+    }
+    
     public Boolean salvar(Veiculo veiculo) {
         return veiculoDAO.salvar(veiculo);
     }
@@ -36,7 +41,11 @@ public class VeiculoRN {
         this.veiculo = veiculo;
     }
     
-    
+    public List<Veiculo> listar() {
+        return veiculoDAO.listar();
+    }    
         
-    
+    public void excluir(Veiculo veiculo) {
+        veiculoDAO.excluir(veiculo);
+    }
 }

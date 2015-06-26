@@ -70,7 +70,7 @@ public class Vendedor implements Serializable {
     @Size(max = 20)
     @Column(name = "senha")
     private String senha;
-    @OneToMany(mappedBy = "idVendedor")
+    @OneToMany(mappedBy = "vendedor")
     private Collection<Venda> vendaCollection;
 
     public Vendedor() {
