@@ -6,7 +6,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import senac.segundonaveiculos.entidades.Venda;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-05-27T17:38:47")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2015-06-25T20:01:35")
 @StaticMetamodel(Cliente.class)
 public class Cliente_ { 
 

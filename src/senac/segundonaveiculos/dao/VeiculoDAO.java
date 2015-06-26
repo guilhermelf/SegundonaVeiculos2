@@ -51,7 +51,7 @@ public class VeiculoDAO implements ICrud<Veiculo>{
 
     @Override
     public Veiculo consultar(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (Veiculo) em.createQuery("select v from Veiculo v where v.id = "+id+" order by v.nome").getSingleResult();
     }
     
 }

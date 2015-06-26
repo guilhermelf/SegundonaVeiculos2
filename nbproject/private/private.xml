@@ -3,20 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/mb/ClienteMB.java</file>
-            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/rn/ClienteRN.java</file>
-=======
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/dao/VendedorDAO.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/entidades/Cliente.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/mb/ClienteMB.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/rn/VendaRN.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/dao/VeiculoDAO.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/rn/VeiculoRN.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/dao/VendaDAO.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/util/ICrud.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/rn/ClienteRN.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/src/senac/segundonaveiculos/dao/ClienteDAO.java</file>
-            <file>file:/F:/.Trashes/Programação/Java/ProjetosJava/segundonaveiculos2/web/listarCliente.xhtml</file>
-        <group/>
+            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/rest/RestResource.java</file>
+            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/dao/VendedorDAO.java</file>
+            <file>file:/E:/projetos/SegundonaVeiculos2/src/senac/segundonaveiculos/dao/VeiculoDAO.java</file>
+        </group>
     </open-files>
 </project-private>

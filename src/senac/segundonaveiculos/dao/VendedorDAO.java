@@ -51,7 +51,7 @@ public class VendedorDAO implements ICrud<Vendedor> {
 
     @Override
     public Vendedor consultar(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (Vendedor) em.createQuery("select v from Vendedor v WHERE v.id = "+id+" order by v.nome").getResultList();
     }
 
 }
